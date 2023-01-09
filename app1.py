@@ -40,6 +40,12 @@ fig = px.bar(
 st.plotly_chart(fig)
 
 
+uploaded_file = st.file_uploader('Choose a XLSX file', type='xlsx')
+if uploaded_file:
+    st.markdown('---')
+    df = pd.read_excel(uploaded_file, engine='openpyxl')
+    st.dataframe(df)
+
 #uploaded_file = st.file_uploader("Choose a file")
 #if uploaded_file is not None:
   #df = pd.read_csv(uploaded_file)
