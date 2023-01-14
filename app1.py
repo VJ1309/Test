@@ -2,7 +2,16 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-
+st.markdown(
+    """
+    <style>
+    .main {
+    background-color: #F5F5F5;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.set_page_config(page_title='Collector Efficiency')
 st.title("Collector's Efficiency 📈")
 st.subheader('Feed me with your Excel file')
